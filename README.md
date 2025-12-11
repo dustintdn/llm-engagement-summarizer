@@ -34,6 +34,7 @@ The workflow:
 ```
 engagement-survey-summarizer/
 │
+├── synthetic_engagement_survey.csv        # Employee-experience survey data
 ├── engagement_survey_summarizer.py        # Pipeline script
 ├── visualizations.py                      # Visualization code (sentiment + themes)
 │
