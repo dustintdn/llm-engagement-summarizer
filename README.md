@@ -89,7 +89,6 @@ Theme: Career Growth
 • Employees feel unclear about upward mobility
 • Requests for more mentorship and skill development
 • Positive sentiment toward manager support but desire for structure
-• HR Action: define clear promotion paths, launch internal mobility programs
 ```
 
 ---
