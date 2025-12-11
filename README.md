@@ -81,8 +81,9 @@ The repo includes quick HR-friendly charts:
 * Average sentiment by theme
 
 ---
-## 🧪 Example Input Snippet
+## 🧪 Example Inputs/Outputs
 
+### Input Data: unstructured employee comments
 ```
 Columns:
 employee_id,department,tenure_years,engagement_score,open_comment
@@ -91,10 +92,7 @@ E001,Engineering,2.3,4,"I appreciate the flexibility and my team, but sometimes 
 E002,Marketing,1.1,3,"Workload has increased a lot recently and it's becoming hard to maintain balance."
 E003,Sales,4.8,5,"My manager is fantastic and gives helpful feedback that supports my growth."
 ```
----
-
-## 🧪 Example Output Snippet
-
+### Output Data: labeled theme and summary highlights
 ```
 Theme: Career Growth
 --------------------
