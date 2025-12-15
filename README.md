@@ -24,7 +24,7 @@ The workflow:
 1. **Generate synthetic survey responses**
 2. **Perform sentiment analysis** (using TextBlob)
 3. **Group comments by topic** by embedding survey comments and applying clustering
-4. **Use an LLM to summarize themes**
+4. **Use an LLM to summarize themes and structured outputs to enforce sentiment labels and themes (JSON format)**
 5. **Visualize sentiment and theme distribution**
 
 ---
@@ -39,8 +39,8 @@ engagement-survey-summarizer/
 ├── visualizations.py                      # Visualization code (sentiment + themes)
 │
 ├── sample_outputs/
-│   ├── theme_summaries.csv
-│   └── theme_summaries.json
+│   ├── cluster_summaries.csv
+│   └── executive_summary.json
 │
 └── README.md
 ```
@@ -94,11 +94,11 @@ E003,Sales,4.8,5,"My manager is fantastic and gives helpful feedback that suppor
 ```
 ### Output Data: labeled theme and summary highlights
 ```
-Theme: Career Growth
+Columns:
+cluster,theme,overall_sentiment,themes,summary,recommended_action,representative_comment,n_comments
 --------------------
-• Employees feel unclear about upward mobility
-• Requests for more mentorship and skill development
-• Positive sentiment toward manager support but desire for structure
+0,Empowerment and Collaboration,Positive,"Collaboration and Teamwork, Empowerment and Innovation, Alignment with Company Mission","Employees feel that the team collaborates well, leadership empowers them, and they are aligned with the company's mission. There is a strong sense of purpose and encouragement for innovation within the workplace.",Continue to promote and celebrate team collaboration and innovative efforts among employees.,Our team collaborates extremely well and leadership is empowering.,8
+1,Supportive Team Culture,Positive,"Team Collaboration, Supportive Work Environment, Workload Management","Overall, employees express a strong appreciation for the supportive and collaborative culture within the engineering team, alongside a recognition of some challenges related to cross-team collaboration and workload pressures due to unrealistic deadlines.",Enhance cross-team collaboration initiatives and assess workload expectations to ensure they are realistic and manageable.,Good work-life balance and supportive teammates.,25
 ```
 
 ---
