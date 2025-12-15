@@ -88,6 +88,36 @@ cluster,theme,overall_sentiment,themes,summary,recommended_action,representative
 0,Empowerment and Collaboration,Positive,"Collaboration and Teamwork, Empowerment and Innovation, Alignment with Company Mission","Employees feel that the team collaborates well, leadership empowers them, and they are aligned with the company's mission. There is a strong sense of purpose and encouragement for innovation within the workplace.",Continue to promote and celebrate team collaboration and innovative efforts among employees.,Our team collaborates extremely well and leadership is empowering.,8
 1,Supportive Team Culture,Positive,"Team Collaboration, Supportive Work Environment, Workload Management","Overall, employees express a strong appreciation for the supportive and collaborative culture within the engineering team, alongside a recognition of some challenges related to cross-team collaboration and workload pressures due to unrealistic deadlines.",Enhance cross-team collaboration initiatives and assess workload expectations to ensure they are realistic and manageable.,Good work-life balance and supportive teammates.,25
 ```
+### Output Data: narrative/global summary of all themes
+```
+{
+  "overall_sentiment": "Neutral",
+  "strengths": [
+    "Strong sense of purpose and alignment with the company's mission",
+    "High levels of collaboration within the engineering team",
+    "Empowering leadership that supports innovation",
+    "Flexibility with work-from-home options",
+    "Improvements in team morale"
+  ],
+  "areas_of_concern": [
+    "Heightened stress and burnout due to increased workloads",
+    "Understaffing and unrealistic deadlines",
+    "Outdated tools and processes",
+    "Unclear communication from leadership",
+    "Limited career advancement opportunities",
+    "Need for clearer expectations and priorities",
+    "Insufficient documentation, onboarding processes, and training"
+  ],
+  "recommended_actions": [
+    "Evaluate workload distributions and staffing levels to mitigate burnout",
+    "Review and update tools and processes to enhance efficiency",
+    "Implement regular check-ins to improve communication from leadership",
+    "Clarify career advancement paths and provide constructive feedback mechanisms",
+    "Enhance documentation, onboarding, and training programs for better clarity"
+  ],
+  "narrative_summary": "Employees generally appreciate the supportive and collaborative culture within the engineering team, highlighting effective teamwork and leadership empowerment. However, they face challenges such as heightened stress from increased workloads and unrealistic deadlines, particularly due to understaffing and outdated tools. Despite positive aspects such as work-from-home flexibility and improved morale, there are significant concerns regarding communication clarity from leadership and opportunities for professional growth. Addressing these issues through targeted actions can further strengthen the positive culture while alleviating current pressures."
+}
+```
 
 ---
 ## 🔑 Sample Code
