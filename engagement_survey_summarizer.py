@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 import re
@@ -8,7 +9,7 @@ from sklearn.metrics import pairwise_distances_argmin_min
 
 # ---- Replace with your provider (OpenAI, Anthropic, etc.) ----
 from openai import OpenAI
-client = OpenAI(api_key="YOUR_API_KEY")
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 
 # ============================================================
@@ -47,9 +48,9 @@ def llm_label_cluster(comments):
     response = client.chat.completions.create(
         model="gpt-4.1",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=20
+        max_tokens=50
     )
-    return response.choices[0].message["content"].strip()
+    return response.choices[0].message.content.strip()
 
 
 def llm_summarize_cluster(comments):
@@ -68,9 +69,9 @@ def llm_summarize_cluster(comments):
     response = client.chat.completions.create(
         model="gpt-4.1",
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=150
+        max_tokens=200
     )
-    return response.choices[0].message["content"].strip()
+    return response.choices[0].message.content.strip()
 
 
 def llm_global_summary(cluster_summaries):
@@ -96,7 +97,7 @@ def llm_global_summary(cluster_summaries):
         messages=[{"role": "user", "content": prompt}],
         max_tokens=250
     )
-    return response.choices[0].message["content"].strip()
+    return response.choices[0].message.content.strip()
 
 
 # ============================================================
