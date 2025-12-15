@@ -61,6 +61,8 @@ For each theme, an LLM generates:
 * Summary description
 * Recommended action for people decision-makers
 
+A narrative summary that synthesizes all key themes into an overall report with recommendations and highlights.
+
 ### 3. **Visualizations**
 
 The repo includes quick HR-friendly charts:
