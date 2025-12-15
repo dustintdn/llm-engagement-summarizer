@@ -51,34 +51,22 @@ engagement-survey-summarizer/
 
 ### 1. **Synthetic Data Generation**
 
-Creates 300 employee comments across 5 HR themes:
+Creates 100 employee comments across randomized HR themes.
 
-* Leadership
-* Culture
-* Career Growth
-* Compensation
-* Work-Life Balance
-
-### 2. **Sentiment Analysis**
-
-A polarity score is assigned to each comment
-(`-1 = negative`, `+1 = positive`).
-
-### 3. **LLM Theme Summaries**
+### 2. **LLM Theme Summaries**
 
 For each theme, an LLM generates:
 
 * Key themes
-* Common concerns
-* Positive highlights
+* Summary description
+* Recommended action for people decision-makers
 
-### 4. **Visualizations**
+### 3. **Visualizations**
 
 The repo includes quick HR-friendly charts:
 
 * Sentiment distribution
 * Comment count by theme
-* Average sentiment by theme
 
 ---
 ## 🧪 Example Inputs/Outputs
@@ -102,18 +90,18 @@ cluster,theme,overall_sentiment,themes,summary,recommended_action,representative
 ```
 
 ---
-## 🔑 Environment Variables
+## 🔑 Sample Code
 
 Set your OpenAI key for the LLM summarization step:
-
 ```
-export OPENAI_API_KEY=your_key_here
-```
-
-Or place it in a `.env` file:
-
-```
-OPENAI_API_KEY=your_key_here
+import os
+os.environ["OPENAI_API_KEY"] = your_key_here
 ```
 
+Clone repo and execute .py scripts:
+```
+!git clone https://github.com/dustintdn/llm-engagement-summarizer.git
+!python /llm-engagement-summarizer/engagement_survey_summarizer.py
+!python /llm-engagement-summarizer/visualizations.py
+```
 ---
