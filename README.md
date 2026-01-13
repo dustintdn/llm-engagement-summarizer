@@ -22,7 +22,7 @@ This project simulates an HR engagement survey consisting of open-ended employee
 The workflow:
 
 1. **Generate synthetic survey responses**
-2. **Perform sentiment analysis** (using TextBlob)
+2. **Perform sentiment analysis**
 3. **Group comments by topic** by embedding survey comments and applying clustering
 4. **Use an LLM to summarize themes and structured outputs to enforce sentiment labels and themes (JSON format)**
 5. **Visualize sentiment and theme distribution**
