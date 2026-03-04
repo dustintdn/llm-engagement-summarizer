@@ -74,22 +74,20 @@ The repo includes quick HR-friendly charts:
 ## 🧪 Example Inputs/Outputs
 
 ### Input Data: unstructured employee comments
-```
-Columns:
-employee_id,department,tenure_years,engagement_score,open_comment
---------------------
-E001,Engineering,2.3,4,"I appreciate the flexibility and my team, but sometimes communication from leadership feels unclear."
-E002,Marketing,1.1,3,"Workload has increased a lot recently and it's becoming hard to maintain balance."
-E003,Sales,4.8,5,"My manager is fantastic and gives helpful feedback that supports my growth."
-```
-### Output Data: labeled theme and summary highlights
-```
-Columns:
-cluster,theme,overall_sentiment,themes,summary,recommended_action,representative_comment,n_comments
---------------------
-0,Empowerment and Collaboration,Positive,"Collaboration and Teamwork, Empowerment and Innovation, Alignment with Company Mission","Employees feel that the team collaborates well, leadership empowers them, and they are aligned with the company's mission. There is a strong sense of purpose and encouragement for innovation within the workplace.",Continue to promote and celebrate team collaboration and innovative efforts among employees.,Our team collaborates extremely well and leadership is empowering.,8
-1,Supportive Team Culture,Positive,"Team Collaboration, Supportive Work Environment, Workload Management","Overall, employees express a strong appreciation for the supportive and collaborative culture within the engineering team, alongside a recognition of some challenges related to cross-team collaboration and workload pressures due to unrealistic deadlines.",Enhance cross-team collaboration initiatives and assess workload expectations to ensure they are realistic and manageable.,Good work-life balance and supportive teammates.,25
-```
+
+| employee_id | department | tenure_years | engagement_score | open_comment |
+|-------------|------------|:------------:|:----------------:|--------------|
+| E001 | Engineering | 2.3 | 4 | I appreciate the flexibility and my team, but sometimes communication from leadership feels unclear. |
+| E002 | Marketing | 1.1 | 3 | Workload has increased a lot recently and it's becoming hard to maintain balance. |
+| E003 | Sales | 4.8 | 5 | My manager is fantastic and gives helpful feedback that supports my growth. |
+
+### Output Data: identified themes and their descriptions
+
+| cluster | theme | overall_sentiment | themes | summary | recommended_action | representative_comment | n_comments |
+|:-------:|-------|:-----------------:|--------|---------|-------------------|----------------------|:----------:|
+| 0 | Empowerment and Collaboration | Positive | Collaboration and Teamwork, Empowerment and Innovation, Alignment with Company Mission | Employees feel the team collaborates well, leadership empowers them, and they are aligned with the company's mission. There is a strong sense of purpose and encouragement for innovation. | Continue to promote and celebrate team collaboration and innovative efforts among employees. | Our team collaborates extremely well and leadership is empowering. | 8 |
+| 1 | Supportive Team Culture | Positive | Team Collaboration, Supportive Work Environment, Workload Management | Employees express strong appreciation for the supportive and collaborative culture, alongside challenges related to cross-team collaboration and workload pressures due to unrealistic deadlines. | Enhance cross-team collaboration initiatives and assess workload expectations to ensure they are realistic and manageable. | Good work-life balance and supportive teammates. | 25 |
+
 ### Output Data: narrative/global summary of all themes
 ```
 {
